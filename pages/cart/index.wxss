@@ -1,0 +1,36 @@
+.nav-bar-wrap {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+}
+
+.submit-bar-wrap {
+  padding-left: 5vw;
+}
+
+.cart-items-container {
+  padding: 64px 0 50px;
+}
+
+.cart-items {
+  overflow: auto;
+  width: calc(100vh - 50px);
+}
+
+.cart-item-wrap {
+  padding: 5px 10px 5px 40px!important;
+  border-bottom: 1px solid #eee;
+  background: #fff!important;
+}
+
+.thumb-wrap {
+  position: relative;
+}
+.thumb-wrap .van-checkbox {
+  position: absolute;
+  right: calc(100% + 5px);
+  top: 50%;
+  transform: translateY(-50%);
+}

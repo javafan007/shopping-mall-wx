@@ -1,0 +1,63 @@
+  <wxs module="wxs" src="../../wxs/index.wxs"></wxs>
+
+<view class="container">
+  <swiper indicator-dots="{{true}}">
+    <swiper-item wx:for="{{goods.images}}" wx:key="{{item.id}}">
+      <van-image width="20rem" height="100%" src="{{item.serverPath}}" fit="contain" />
+    </swiper-item>
+  </swiper>
+
+  <view class="block-wrap">
+    <view class="goods-name">{{goods.name}}</view>
+    <view class="goods-sub-name">{{goods.subName}}</view>
+    <van-row>
+      <van-col span="22">￥<text class="goods-price">{{goods.price}}</text></van-col>
+      <van-col span="2"><text style="color: {{goodsStatus.statusColor}}">{{goodsStatus.statusText}}</text></van-col>
+    </van-row>
+  </view>
+
+  <view class="block-wrap">
+    <view><text class="label">产地：</text>{{goods.country}} {{goods.city}}</view>
+    <view><text class="label">规格：</text>{{goods.formatedUnit}}</view>
+    <view wx:if="{{goods.badge}}">
+      <van-tag plain type="warning" wx:for="{{goods.badgeArray}}" wx:key="*this">{{item}}</van-tag>
+    </view>
+  </view>
+
+  <view class="block-wrap">
+    <van-row>
+      <van-col span="22">
+        <text class="label">配送状态</text>：{{region[0]}} {{region[1]}} {{region[2]}}
+      </van-col>
+      <van-col span="2" style="text-align: right;">
+        <picker mode="region" bindchange="chooseAddress" value="{{region}}">
+          <van-icon name="location-o" size="1rem" />
+        </picker>
+      </van-col>
+    </van-row>
+    <view><text style="color:red;">订单成功受理后，预计10日送达</text></view>
+  </view>
+
+  <view class="recommend-wrap">
+    <van-grid column-num="2" gutter="5">
+      <van-grid-item use-slot wx:for="{{ recommendList }}">
+        <view>
+          <image style="width: 8rem; height: 8rem;" src="{{item.headerUrl}}" mode="widthFix" />
+          <view>{{item.name}}</view>
+          <van-row gutter="20">
+            <van-col span="12" class="price">￥{{goods.price}}</van-col>
+            <van-col span="12" class="icon-add"><van-icon name="add-o" /></van-col>
+          </van-row>
+        </view>
+      </van-grid-item>
+    </van-grid>
+  </view>
+
+  <van-goods-action>
+    <van-goods-action-icon icon="cart-o" text="购物车" info="5" />
+    <van-goods-action-button text="加入购物车" type="primary" size="small" />
+    <van-goods-action-button text="去结算" size="small" url="/pages/cart/index" />
+  </van-goods-action>
+</view>
+
+

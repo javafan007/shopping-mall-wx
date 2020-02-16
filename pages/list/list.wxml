@@ -1,0 +1,44 @@
+<view class="page-container">
+  <view class="side-bar">
+    <view class="side-bar-item {{item.id === filters.cat1 ? 'active' : ''}}"
+      bindtap="onChangeCat1" 
+      data-id="{{item.id}}" 
+      wx:for="{{catList1}}"
+      wx:key="{{item.id}}">
+        <text>{{item.name}}</text>
+    </view>
+  </view>
+
+  <!-- 右侧主内容 -->
+  <view class="main-content">
+    <van-dropdown-menu>
+      <van-dropdown-item title="热门筛选" value="{{ filters.cat2 }}" options="{{ catList2 }}" bind:change="onChangeCat2" />
+      <van-dropdown-item title="商品排序" value="{{ filters.sort }}" options="{{ sortList }}"  bind:change="onChangeSort" />
+    </van-dropdown-menu>
+
+    <!-- 商品列表 -->
+    <scroll-view scroll-y="true" style="height: calc(100vh - 50px);" bindscrolltolower="onScrollToBottom">
+      <view wx:for="{{goodsList}}" wx:key="{{item.id}}">
+        <van-divider />
+        <van-card
+          thumb="{{item.headerUrl}}"
+          title="{{item.name}}"
+          desc="{{item.subName}}"
+          price="{{item.price}}"
+          thumb-link="/pages/detail/index?id={{item.id}}"
+        >
+          <view slot="tags">
+            <van-tag plain type="warning" wx:if="{{item.badge}}">{{item.badge}}</van-tag>
+          </view>
+          <view slot="footer" style="height: 0">
+            <van-icon name="shopping-cart-o" style="position: relative; top: -2rem;" size="1.5rem" />
+          </view>
+        </van-card>
+      </view>
+      <view style="text-align: center; padding: 20px 0 40px;">
+        <van-loading size="24px" wx:if="{{loading}}">加载中...</van-loading>
+      </view>
+    </scroll-view>
+  </view>
+
+</view>

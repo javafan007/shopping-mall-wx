@@ -1,0 +1,20 @@
+/**index.wxss**/
+.page-block {
+  margin: 15rpx 0;
+  background: #fff;
+  overflow-x: auto;
+  --card-thumb-size: 5rem;
+}
+
+.icon-container {
+  text-align: center;
+  padding: 3vh;
+}
+.icon-container image {
+  width: 8vw;
+}
+.hot-title {
+  padding: 4vh 0 2vh 0;
+  font-size: 16px;
+  text-align: center;
+}

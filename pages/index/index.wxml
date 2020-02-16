@@ -1,0 +1,58 @@
+<!--index.wxml-->
+<view class="container">
+
+<!-- 关键字搜索 -->
+<van-search
+  value="{{ value }}"
+  placeholder="请输入搜索关键词"
+  show-action
+  bind:search="onSearch"
+  bind:cancel="onCancel"
+>
+  <view slot="action" bind:tap="onSearch">搜索</view>
+</van-search>
+
+<!-- 导航 -->
+<view class="page-block">
+  <view class="grid">
+    <view class="grid-item" wx:for="{{navItems}}">
+      <image src="{{item.icon}}" mode="widthFix"></image>
+      <view>{{item.text}}</view>
+    </view>
+  </view>
+</view>
+
+<!-- 一级分类 -->
+<view class="page-block">
+  <view class="grid" style="{{'width:150vw'}}">
+    <view class="grid-item" wx:for="{{topCatList}}">
+      <image src="{{item.icon}}" mode="widthFix"></image>
+      <view>{{item.text}}</view>
+    </view>
+  </view>
+</view>
+
+<!-- 人气热卖 -->
+<view class="page-block">
+  <view class="hot-title">人气热卖</view>
+  <view class="hot-list">
+     <view wx:for="{{recommendlist}}" wx:key="{{item.id}}">
+      <van-divider />
+      <van-card
+          thumb="{{item.headerUrl}}"
+          title="{{item.name}}"
+          desc="{{item.subName}}"
+          price="{{item.price}}"
+        >
+        <view slot="tags">
+          <van-tag plain type="warning" wx:if="{{item.badge}}">{{item.badge}}</van-tag>
+        </view>
+        <view slot="footer" style="height: 0">
+          <van-icon name="shopping-cart-o" style="position: relative; top: -3rem;" size="1.5rem" />
+        </view>
+      </van-card>
+    </view>
+  </view>
+</view>
+
+</view>

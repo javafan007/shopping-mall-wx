@@ -1,0 +1,42 @@
+<view class="nav-bar-wrap">
+  <van-nav-bar
+    title="选择商品去结算"
+    left-arrow
+    bind:click-left="onClickLeft"
+    bind:click-right="onClickRight"
+  >
+    <van-icon name="question-o" slot="right" color="green" />
+  </van-nav-bar>
+</view>
+
+<view class="cart-items-container">
+  <van-card
+      price="{{item.price}}"
+      desc="{{item.subName}}"
+      title="{{item.name}}"
+      wx:for="{{cartItems}}"
+      wx:key="{{item.id}}"
+      custom-class="cart-item-wrap"
+    >
+      <view slot="thumb">
+        <view class="thumb-wrap">
+          <van-checkbox value="{{checkedMap[item.id]}}" data-id="{{item.id}}" bind:change="onChecked"></van-checkbox>
+          <image src="{{item.headerUrl}}" 
+          style="width: 90px; height: 90px;"
+          mode="aspectFit"></image>
+        </view>
+      </view>
+      <view slot="footer">
+        <van-stepper value="{{item.amount}}" data-id="{{item.id}}" bind:change="onChangeNum" />
+      </view>
+  </van-card>
+</view>
+
+<van-submit-bar
+  price="{{ totalPrice }}"
+  button-text="提交订单"
+  bind:submit="onSubmit"
+  tip="{{ true }}"
+>
+  <van-checkbox custom-class="submit-bar-wrap" value="{{ checkedAll }}" bind:change="toggleCheckedAll">全选</van-checkbox>
+</van-submit-bar>

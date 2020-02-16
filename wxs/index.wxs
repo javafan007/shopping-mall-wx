@@ -1,0 +1,18 @@
+
+function getItemNum(id, cartItems) {
+  for (var i = 0; i < cartItems.length; i++) {
+    if (cartItems[i].id === id) {
+      return cartItems[i].num;
+    }
+  }
+  return null;
+}
+
+
+
+// 格式化商品状态
+
+
+module.exports = {
+  getItemNum: getItemNum
+}

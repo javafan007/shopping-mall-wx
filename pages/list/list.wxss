@@ -1,0 +1,45 @@
+/* pages/list/list.wxss */
+
+.page-container {
+  display: flex;
+  flex-direction: row;
+  --card-thumb-size: 4rem;
+}
+
+/* 左侧一级菜单 */
+.side-bar {
+  width: 25vw;
+  height: 100vh;
+  overflow: auto;
+  font-size: 14px;
+}
+.side-bar-item {
+  height: 8vh;
+  line-height: 8vh;
+  background: #eee;
+  text-align: center;
+}
+.side-bar-item.active {
+  background: #fff;
+  color: red;
+}
+
+/* 右侧主内容 */
+.main-content {
+  position: relative;
+  box-sizing: border-box;
+  width: 75vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content .van-dropdown-item {
+  position: absolute;
+}
+
+.goods-container {
+  flex: 1;
+  overflow-y: auto;
+}
+

@@ -1,0 +1,12 @@
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.grid-item {
+  margin: 4vh 0;
+  width: 25vw;
+}
+.grid-item image {
+  width: 8vw; 
+}

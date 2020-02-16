@@ -1,0 +1,45 @@
+/* pages/detail/index.wxss */
+
+
+.block-wrap {
+  margin-top: .3rem;
+  padding: 0.5rem 1rem;
+  line-height: 1.8;
+  font-size: .7rem;
+  background: #fff;
+  color: #333;
+}
+
+.goods-name {
+  font-size: 1rem;
+}
+.goods-sub-name {
+  font-size: .8rem;
+  color: #666;
+}
+.goods-price {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #f23030;
+}
+
+.label {
+  color: #828EA6;
+}
+
+.recommend-wrap {
+  margin-top: .3rem;
+  font-size: .7rem;
+  line-height: 1.5;
+}
+
+.recommend-wrap .price {
+  color: #f23030;
+  font-size: 1rem;
+}
+
+.recommend-wrap .icon-add {
+  text-align: right;
+  color: green;
+  font-size: 1rem;
+}

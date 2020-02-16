@@ -1,0 +1,72 @@
+{
+  "pages": [
+    "pages/detail/index",
+    "pages/list/list",
+    "pages/cart/index",
+    "pages/index/index"
+  ],
+  "usingComponents": {
+    "van-button": "./miniprogram_npm/vant-weapp/button/index",
+    "van-grid": "./miniprogram_npm/vant-weapp/grid/index",
+    "van-grid-item": "./miniprogram_npm/vant-weapp/grid-item/index",
+    "van-row": "./miniprogram_npm/vant-weapp/row/index",
+    "van-col": "./miniprogram_npm/vant-weapp/col/index",
+    "van-action-sheet": "./miniprogram_npm/vant-weapp/action-sheet/index",
+    "van-search": "./miniprogram_npm/vant-weapp/search/index",
+    "van-nav-bar": "./miniprogram_npm/vant-weapp/nav-bar/index",
+    "van-submit-bar": "./miniprogram_npm/vant-weapp/submit-bar/index",
+    "van-checkbox": "./miniprogram_npm/vant-weapp/checkbox/index",
+    "van-stepper": "./miniprogram_npm/vant-weapp/stepper/index",
+    "van-card": "./miniprogram_npm/vant-weapp/card/index",
+    "van-icon": "./miniprogram_npm/vant-weapp/icon/index",
+    "van-transition": "./miniprogram_npm/vant-weapp/transition/index",
+    "van-dropdown-menu": "./miniprogram_npm/vant-weapp/dropdown-menu/index",
+    "van-dropdown-item": "./miniprogram_npm/vant-weapp/dropdown-item/index",
+    "van-toast": "./miniprogram_npm/vant-weapp/toast/index",
+    "van-loading": "./miniprogram_npm/vant-weapp/loading/index",
+    "van-image": "./miniprogram_npm/vant-weapp/image/index",
+    "van-tag": "./miniprogram_npm/vant-weapp/tag/index",
+    "van-divider": "./miniprogram_npm/vant-weapp/divider/index",
+    "van-area": "./miniprogram_npm/vant-weapp/area/index",
+    "van-goods-action": "./miniprogram_npm/vant-weapp/goods-action/index",
+    "van-goods-action-icon": "./miniprogram_npm/vant-weapp/goods-action-icon/index",
+    "van-goods-action-button": "./miniprogram_npm/vant-weapp/goods-action-button/index"
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#11cd6e",
+    "borderStyle": "black",
+    "list": [
+      {
+        "iconPath": "/icon/home-1.png",
+        "selectedIconPath": "/icon/home-2.png",
+        "pagePath": "pages/index/index",
+        "text": "主页"
+      },
+      {
+        "iconPath": "/icon/classify-1.png",
+        "selectedIconPath": "/icon/classify-2.png",
+        "pagePath": "pages/list/list",
+        "text": "分类"
+      },
+      {
+        "iconPath": "/icon/shopping-1.png",
+        "pagePath": "pages/cart/index",
+        "text": "购物车"
+      },
+      {
+        "iconPath": "/icon/me-1.png",
+        "selectedIconPath": "/icon/me-2.png",
+        "pagePath": "pages/index/index",
+        "text": "个人中心"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap56.json"
+}

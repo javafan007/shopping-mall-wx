@@ -1,0 +1,16 @@
+
+<view class="dropdown-container">
+  <view class="dropdown" bindtap="changeVisible">
+    {{placeholder}}
+  </view>
+  <van-transition show="{{ visible }}">
+    <view class="dropdown-list-mask" wx:if="{{visible}}">
+      <view class="dropdown-list">
+        <view class="dropdown-list-item {{item[valueKey] === value ? 'active' : ''}}" 
+          wx:for="{{list}}" wx:key="{{item[valueKey]}}" bindtap="selectItem" data-item="{{item}}">
+            {{item[labelKey]}}
+          </view>
+      </view>
+    </view>
+  </van-transition>
+</view>
