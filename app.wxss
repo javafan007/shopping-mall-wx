@@ -1,4 +1,3 @@
-@import "./miniprogram_npm/vant-weapp/common/index.wxss";
 @import '/style/common.wxss';
 
 /**app.wxss**/
@@ -6,10 +5,4 @@
   height: 100%;
   font-size: 14px;
   background: #eee;
-}
-
-page {
-  --card-padding: 6px 8px;
-  --divider-margin: 0;
-  --card-background-color: #fff;
 }
