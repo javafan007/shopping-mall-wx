@@ -24,6 +24,7 @@ Component({
       const cartItem = normalizeCartItem(e.currentTarget.dataset.item);
       const cartItems = wx.getStorageSync(CART_KEY) || [];
       const found = cartItems.find(item => item.id === cartItem.id);
+      const test = 1;
 
       if(found) {
         found.num++;
